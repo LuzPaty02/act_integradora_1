@@ -24,9 +24,6 @@ def buscar_palindromo_manacher(transmission):
             center = i
             right = i + P[i]
 
-    # Depurar el array P y el centro detectado
-    print(f"Array P: {P}")
-    print(f"Center index: {center}, Right limit: {right}")
 
     # Encontrar el índice del palíndromo más largo
     max_length = max(P)  # Longitud máxima del palíndromo
@@ -35,10 +32,6 @@ def buscar_palindromo_manacher(transmission):
     # Convertir de la cadena preprocesada a la original
     start = (center_index - max_length) // 2  # Convertir la posición a la cadena original
     end = start + max_length - 1  # Calcular el fin del palíndromo
-
-    # Depurar el palíndromo más largo encontrado
-    palindromo = transmission[start:end+1]
-    print(f"Palíndromo más largo encontrado: '{palindromo}' en posiciones {start+1} a {end+1} en la cadena original")
 
     return start + 1, end + 1  # Retornar las posiciones 1-based
 

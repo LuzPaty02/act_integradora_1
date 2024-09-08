@@ -1,5 +1,5 @@
 from KPM_p1 import buscar_codigo_malicioso_KMP
-# from Manacher_p2 import buscar_palindromo_manacher
+from Manacher_p2 import buscar_palindromo_manacher
 # from LCS_p3 import buscar_subsecuencia_lcs
 
 def readfile(filename):
@@ -22,7 +22,7 @@ def main():
     transmissions_files = [transmission1, transmission2]
     transmissions_files_names = ['transmission1.txt', 'transmission2.txt'] # Para imprimir el nombre del archivo en caso de encontrar el código malicioso
 
-#PARTE 1
+#PARTE 1 con KMP
     print("Buscando código malicioso en la transmisión:")
     for mcode_index in range (len(mcode_files)):
         for transmission_index in range(len(transmissions_files)):
@@ -34,7 +34,12 @@ def main():
             else:
                 print(f"False en {transmissions_files_names[transmission_index]} para {mcode_file_names[mcode_index]}")
 
-#PARTE 2
+#PARTE 2 con Manacher
+    print("Buscando palíndromos en la transmisión:")
+    for transmission_index in range(len(transmissions_files)):
+        start, end = buscar_palindromo_manacher(transmissions_files[transmission_index]) #guarda el resultado de la función:  la posición en el archivo de transmissiónX.txt donde inicia y termina el palíndromo más largo
+        #ejemplo de impresión: 150 200 en transmission1.txt
+        print(f"{start} {end} en {transmissions_files_names[transmission_index]}")
 
             
 if __name__ == "__main__":

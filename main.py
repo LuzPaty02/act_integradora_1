@@ -9,11 +9,11 @@ def readfile(filename):
 
 def main():
     #Lee los archivos de texto y los guarda en variables
-    transmission1 = readfile('transmission1.txt')
-    transmission2 = readfile('transmission2.txt')
-    mcode1 = readfile('mcode1.txt')
-    mcode2 = readfile('mcode2.txt')
-    mcode3 = readfile('mcode3.txt')
+    transmission1 = readfile('./txt_files/transmission1.txt')
+    transmission2 = readfile('./txt_files/transmission2.txt')
+    mcode1 = readfile('./txt_files/mcode1.txt')
+    mcode2 = readfile('./txt_files/mcode2.txt')
+    mcode3 = readfile('./txt_files/mcode3.txt')
 
     
     mcode_files = [mcode1, mcode2, mcode3]

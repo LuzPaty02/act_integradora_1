@@ -41,6 +41,8 @@ def main():
         #ejemplo de impresión: 150 200 en transmission1.txt
         print(f"{start} {end} en {transmissions_files_names[transmission_index]}")
 
+#PARTE 3 con LCS
+    print("\nBuscando subsecuencias en la transmisión:\n")
             
 if __name__ == "__main__":
     main()

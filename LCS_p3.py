@@ -19,7 +19,6 @@ def buscar_subsecuencia_lcs(transmission1, transmission2):
                 L[i][j] = 0
 
 
-
     start_pos = end_pos - max_len + 1
     return start_pos, end_pos
 

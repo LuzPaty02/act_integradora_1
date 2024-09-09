@@ -23,7 +23,7 @@ def main():
     transmissions_files_names = ['transmission1.txt', 'transmission2.txt'] # Para imprimir el nombre del archivo en caso de encontrar el código malicioso
 
 #PARTE 1 con KMP
-    print("\nBuscando código malicioso en la transmisión:\n")
+    print("\nBuscando código malicioso en la transmisión:")
     for mcode_index in range (len(mcode_files)):
         for transmission_index in range(len(transmissions_files)):
             found_malicious_code = buscar_codigo_malicioso_KMP(mcode_files[mcode_index], transmissions_files[transmission_index]) #guarda el resultado de la función:  la posición en el archivo de transmissiónX.txt donde inicia el código de mcodeY.txt
@@ -35,16 +35,16 @@ def main():
                 print(f"False en {transmissions_files_names[transmission_index]} para {mcode_file_names[mcode_index]}")
 
 #PARTE 2 con Manacher
-    print("\nBuscando palíndromos en la transmisión:\n")
+    print("\nBuscando palíndromos en la transmisión:")
     for transmission_index in range(len(transmissions_files)):
         start, end = buscar_palindromo_manacher(transmissions_files[transmission_index]) #guarda el resultado de la función:  la posición en el archivo de transmissiónX.txt donde inicia y termina el palíndromo más largo
         #ejemplo de impresión: 150 200 en transmission1.txt
         print(f"{start} {end} en {transmissions_files_names[transmission_index]}")
 
 #PARTE 3 con LCS
-    print("\nBuscando subsecuencias comunes más largas entre transmission1.txt y transmission2.txt:\n")
+    print("\nBuscando subsecuencias comunes más largas entre transmission1.txt y transmission2.txt:")
     start_pos, end_pos = buscar_subsecuencia_lcs(transmission1, transmission2)
-    print(f"{start_pos} {end_pos} en transmission1.txt para el substring común más largo")
+    print(f"{start_pos} {end_pos} en transmission1.txt para el substring común más largo\n")
             
 if __name__ == "__main__":
     main()

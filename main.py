@@ -1,6 +1,6 @@
 from KPM_p1 import buscar_codigo_malicioso_KMP
 from Manacher_p2 import buscar_palindromo_manacher
-# from LCS_p3 import buscar_subsecuencia_lcs
+from LCS_p3 import buscar_subsecuencia_lcs
 
 def readfile(filename):
     with open(filename, 'r') as file:
@@ -42,7 +42,9 @@ def main():
         print(f"{start} {end} en {transmissions_files_names[transmission_index]}")
 
 #PARTE 3 con LCS
-    print("\nBuscando subsecuencias en la transmisión:\n")
+    print("\nBuscando subsecuencias comunes más largas entre transmission1.txt y transmission2.txt:\n")
+    start_pos, end_pos = buscar_subsecuencia_lcs(transmission1, transmission2)
+    print(f"{start_pos} {end_pos} en transmission1.txt para el substring común más largo")
             
 if __name__ == "__main__":
     main()

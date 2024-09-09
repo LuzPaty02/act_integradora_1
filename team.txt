@@ -2,8 +2,9 @@ Luz Patricia Hernández a01637277@tec.mx trabaje en :
 - Desarrollo del archvio main.py
 - Implementación del KMP
 - Implementación de manacher
+- Documentación y reflexión
 Jessica Odette Guizado a01643724@tec.mx trabaje en :
 - Desarrollo del archivo main.py
-- Implementación de la función de lectura de archivos
 - Implementación de LCS
 - creación de casos de prueba
+- Documentación y reflexión
